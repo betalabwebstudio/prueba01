@@ -136,8 +136,7 @@ a:hover{
     flex-shrink: 0; /* Evita que se encoja */
 }
 
-/* BOTONES CORREGIDOS - VISIBLES Y FUNCIONALES */
-/* BOTÓN WHATSAPP CON TEXTO RESPONSIVE */
+/* BOTÓN WHATSAPP */
 .btn-whatsapp {
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     color: white;
@@ -162,64 +161,15 @@ a:hover{
     position: relative;
     z-index: 10;
     text-decoration: none;
-    overflow: hidden; /* Para evitar que el texto se salga */
-    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-/* Versión desktop (texto completo) */
-.btn-whatsapp .text-full {
-    display: inline;
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #20bd5a 0%, #0e7a68 100%);
+    transform: translateY(-1px);
 }
 
-.btn-whatsapp .text-short {
-    display: none;
-}
-
-/* En tablets */
-@media (max-width: 991px) {
-    .btn-whatsapp {
-        font-size: 0.65rem;
-        padding: 7px;
-    }
-    
-    .btn-whatsapp .text-full {
-        display: none;
-    }
-    
-    .btn-whatsapp .text-short {
-        display: inline;
-    }
-}
-
-/* En móviles */
-@media (max-width: 767px) {
-    .btn-whatsapp {
-        font-size: 0.6rem;
-        padding: 6px;
-        gap: 3px;
-    }
-    
-    .btn-whatsapp i {
-        font-size: 0.7rem;
-    }
-}
-
-/* En móviles pequeños */
-@media (max-width: 480px) {
-    .btn-whatsapp {
-        font-size: 0.55rem;
-        padding: 5px 4px;
-    }
-    
-    .btn-whatsapp i {
-        font-size: 0.6rem;
-    }
-}
-
-/* Asegurar que el botón sea siempre visible */
-.producto-info {
-    overflow: visible !important; /* Evitar hidden que esconda botones */
-}
 /* MÓVILES: 3 PRODUCTOS EN FILA SIEMPRE */
 @media (max-width: 767px) {
     .productos-grid {
@@ -331,17 +281,6 @@ footer {
     font-size: 0.75rem;
 }
 
-.cart-info {
-    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 12px;
-    display: inline-block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
 /* Notificaciones */
 .notificacion {
     position: fixed;
@@ -363,21 +302,6 @@ footer {
 @keyframes slideIn {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
-}
-
-/* Mensaje de carga */
-.loading {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    color: #666;
-    grid-column: 1 / -1;
-}
-
-.loading i {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-    color: #4b6cb7;
 }
 
 /* Footer Minimalista */
@@ -468,14 +392,301 @@ footer {
     width: 100px;
     height: 30px;
     border-radius: 50px;
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    cursor: pointer;
 }
 .btn-consultar{
     width: 100px;
     height: 30px;
     border-radius: 50px;
-    color: black;
-    background-color: #25D366;
+    color: white;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
 }
+
+.btn-consultar:hover {
+    background: linear-gradient(135deg, #20bd5a, #0e7a68);
+}
+
+/* PAGINACIÓN CORREGIDA - SIN FONDO BLANCO */
+.paginacion-container {
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    background: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-paginacion {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4b6cb7, #3a56a0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-paginacion:hover:not(:disabled) {
+    background: linear-gradient(135deg, #3a56a0, #2a4480);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-paginacion:disabled {
+    background: #333;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+.numeros-paginas {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-numero {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    background: #0a0a0a;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-numero:hover {
+    border-color: #4b6cb7;
+    background: #222;
+    transform: translateY(-2px);
+}
+
+.btn-numero.active {
+    background: linear-gradient(135deg, #4b6cb7, #3a56a0);
+    color: white;
+    border-color: #4b6cb7;
+    transform: scale(1.1);
+}
+
+.puntos {
+    padding: 0 10px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.info-paginacion {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagina-actual {
+    font-weight: 600;
+    color: #4b6cb7;
+}
+
+.total-productos {
+    color: #888;
+}
+
+/* ERRORES Y ESTADOS */
+.error-critico {
+    text-align: center;
+    padding: 40px 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 2px solid #333;
+    margin: 20px 0;
+    color: white;
+}
+
+.error-critico i {
+    font-size: 3rem;
+    color: #e53e3e;
+    margin-bottom: 20px;
+}
+
+.error-critico h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.error-critico p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.acciones-error {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-reload, .btn-inicio {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-reload {
+    background: #4b6cb7;
+    color: white;
+}
+
+.btn-inicio {
+    background: #38a169;
+    color: white;
+}
+
+.btn-reload:hover {
+    background: #3a56a0;
+}
+
+.btn-inicio:hover {
+    background: #2f855a;
+}
+
+.sin-productos {
+    text-align: center;
+    padding: 40px 20px;
+    color: #aaa;
+    font-size: 1.1rem;
+    background: #1a1a1a;
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid #333;
+}
+
+.sin-productos i {
+    font-size: 3rem;
+    color: #4b6cb7;
+    margin-bottom: 15px;
+}
+
+/* NOTIFICACIONES */
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-family: monospace;
+}
+
+.notificacion.success {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+}
+
+.notificacion.error {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+.notificacion.warning {
+    background: linear-gradient(135deg, #d69e2e, #b7791f);
+}
+
+/* RESPONSIVE PARA PAGINACIÓN */
+@media (max-width: 768px) {
+    .btn-paginacion {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-numero {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .paginacion {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-paginacion span {
+        display: none;
+    }
+    
+    .btn-paginacion {
+        padding: 10px;
+    }
+    
+    .btn-paginacion i {
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    .btn-numero {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .info-paginacion {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 0.8rem;
+    }
+}
+
 *{
     cursor: default;
+}
+
+/* Cursor pointer para botones */
+button, .btn-whatsapp, .btn-paginacion, .btn-numero, 
+.btn-reload, .btn-inicio, .btn-ver, .btn-consultar {
+    cursor: pointer !important;
+}
+
+/* Cursor pointer para enlaces */
+a {
+    cursor: pointer !important;
 }

@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {id: 12, nombre: "Pubg Mobile 660 UC", imagen: "https://i.pinimg.com/736x/b8/3d/8d/b83d8d3e9beecfac081f4e742d27661c.jpg", precio: 77500, categoria: "juegos"},
         {id: 13, nombre: "Genshin Impact 60 Genesis Cristal", imagen: "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg", precio: 8500, categoria: "juegos"},
         {id: 14, nombre: "Genshin Impact 330 Genesis Cristal", imagen: "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg", precio: 36000, categoria: "juegos"},
+        {id: 15, nombre: "Genshin Impact 660 Genesis Cristal", imagen: "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg", precio: 68000, categoria: "juegos"},
+        {id: 16, nombre: "Chat GPT Plus 1 mes", imagen: "https://i.pinimg.com/736x/99/73/65/997365fc94842f0ec407f77476402341.jpg", precio: 35000, categoria: "herramientas"},
+        {id: 17, nombre: "Canva Pro 1 año", imagen: "https://i.pinimg.com/1200x/97/3a/9a/973a9af24b3aec8e40369cf842293f07.jpg", precio: 62000, categoria: "herramientas"},
+        {id: 18, nombre: "Canva Education 1 Año", imagen: "https://i.pinimg.com/1200x/c9/35/61/c93561ce889c03839424e455d98579c3.jpg", precio: 16000, categoria: "herramientas"},
     ];
     
     // Función para crear mensaje de WhatsApp mejorado
@@ -39,14 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Mostrar productos
+    // Mostrar TODOS los productos sin filtros
     function mostrarProductos() {
         productosContainer.innerHTML = '';
         
         productos.forEach(producto => {
             const precioFormateado = producto.precio.toLocaleString('es-PY');
             
-            // HTML con texto responsive para el botón
+            // HTML simplificado con solo "Comprar" en el botón
             const productoHTML = `
                 <div class="producto-card" data-category="${producto.categoria}">
                     <div class="producto-imagen">
@@ -60,9 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="producto-precio">${precioFormateado} GS</div>
                         <button class="btn-whatsapp" onclick="enviarAWhatsApp(${producto.id})">
                             <i class="fab fa-whatsapp"></i>
-                            <span class="text-full">Comprar</span>
-                            <span class="text-short">Comprar</span>
-                            <span class="text-icon">WhatsApp</span>
+                            Comprar
                         </button>
                     </div>
                 </div>
@@ -101,50 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
     
-    // Función para detectar tamaño de pantalla y actualizar botones
-    function actualizarBotonesPorPantalla() {
-        const ancho = window.innerWidth;
-        const botones = document.querySelectorAll('.btn-whatsapp');
-        
-        botones.forEach(boton => {
-            const textoCompleto = boton.querySelector('.text-full');
-            const textoCorto = boton.querySelector('.text-short');
-            const textoIcono = boton.querySelector('.text-icon');
-            
-            if (textoCompleto && textoCorto && textoIcono) {
-                if (ancho >= 992) { // Desktop
-                    textoCompleto.style.display = 'inline';
-                    textoCorto.style.display = 'none';
-                    textoIcono.style.display = 'none';
-                } else if (ancho >= 768) { // Tablet
-                    textoCompleto.style.display = 'none';
-                    textoCorto.style.display = 'inline';
-                    textoIcono.style.display = 'none';
-                } else if (ancho >= 480) { // Móvil grande
-                    textoCompleto.style.display = 'none';
-                    textoCorto.style.display = 'inline';
-                    textoIcono.style.display = 'none';
-                } else { // Móvil pequeño
-                    textoCompleto.style.display = 'none';
-                    textoCorto.style.display = 'none';
-                    textoIcono.style.display = 'inline';
-                }
-            }
-        });
-    }
-    
     // Hacer las funciones globales
     window.enviarAWhatsApp = enviarAWhatsApp;
     
     // Inicializar
     mostrarProductos();
-    
-    // Actualizar botones cuando se carga la página
-    setTimeout(actualizarBotonesPorPantalla, 100);
-    
-    // Actualizar botones cuando cambia el tamaño de la ventana
-    window.addEventListener('resize', actualizarBotonesPorPantalla);
-    
-    // Actualizar botones después de 500ms (por si hay imágenes cargando)
-    setTimeout(actualizarBotonesPorPantalla, 500);
 });
