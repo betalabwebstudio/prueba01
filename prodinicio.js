@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="producto-precio">${precioFormateado} GS</div>
                         <button class="btn-whatsapp" onclick="enviarAWhatsApp(${producto.id})">
                             <i class="fab fa-whatsapp"></i>
-                            <span class="text-full">Comprar por WhatsApp</span>
+                            <span class="text-full">Comprar</span>
                             <span class="text-short">Comprar</span>
                             <span class="text-icon">WhatsApp</span>
                         </button>

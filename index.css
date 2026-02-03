@@ -123,6 +123,7 @@ a:hover{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     flex-shrink: 0; /* Evita que se encoja */
 }
@@ -246,6 +247,7 @@ a:hover{
         font-size: 0.6rem;
         height: 24px;
         margin-bottom: 3px;
+        -webkit-line-clamp: 2;
     }
     
     .producto-precio {
