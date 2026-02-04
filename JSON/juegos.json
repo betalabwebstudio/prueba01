@@ -1,58 +1,58 @@
 [
     {
         "id": 1,
-        "nombre": "Netflix Premium 1 mes",
-        "imagen": "1.png",
-        "precio": 30000,
-        "categoria": "streaming"
+        "nombre": "Pubg Mobile 60 UC",
+        "imagen": "https://i.pinimg.com/736x/b8/3d/8d/b83d8d3e9beecfac081f4e742d27661c.jpg",
+        "precio": 15500,
+        "categoria": "juegos"
     },
     {
         "id": 2,
-        "nombre": "Spotify Premium 1 mes",
-        "imagen": "2.png",
-        "precio": 30000,
-        "categoria": "streaming"
+        "nombre": "Pubg Mobile 325 UC",
+        "imagen": "https://i.pinimg.com/736x/b8/3d/8d/b83d8d3e9beecfac081f4e742d27661c.jpg",
+        "precio": 50000,
+        "categoria": "juegos"
     },
     {
         "id": 3,
-        "nombre": "Youtube Music Premium 1 mes",
-        "imagen": "3.png",
-        "precio": 30000,
-        "categoria": "streaming"
+        "nombre": "Pubg Mobile 660 UC",
+        "imagen": "https://i.pinimg.com/736x/b8/3d/8d/b83d8d3e9beecfac081f4e742d27661c.jpg",
+        "precio": 80000,
+        "categoria": "juegos"
     },
     {
         "id": 4,
-        "nombre": "Disney+ Premium 1 mes",
-        "imagen": "disney.png",
-        "precio": 35000,
-        "categoria": "streaming"
+        "nombre": "Pubg Mobile  1800 UC",
+        "imagen": "https://i.pinimg.com/736x/b8/3d/8d/b83d8d3e9beecfac081f4e742d27661c.jpg",
+        "precio": 190000,
+        "categoria": "juegos"
     },
     {
         "id": 5,
-        "nombre": "HBO Max 1 mes",
-        "imagen": "hbo.png",
-        "precio": 32000,
-        "categoria": "streaming"
+        "nombre": "Genshin Impact 60 Genesis Cristal",
+        "imagen": "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg",
+        "precio": 8500,
+        "categoria": "juegos"
     },
     {
         "id": 16,
-        "nombre": "Chat GPT Plus 1 mes",
-        "imagen": "https://i.pinimg.com/736x/99/73/65/997365fc94842f0ec407f77476402341.jpg",
-        "precio": 35000,
-        "categoria": "herramientas"
+        "nombre": "Genshin Impact 330 Genesis Cristal",
+        "imagen": "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg",
+        "precio": 36000,
+        "categoria": "juegos"
     },
     {
         "id": 17,
-        "nombre": "Canva Pro 1 año",
-        "imagen": "https://i.pinimg.com/1200x/97/3a/9a/973a9af24b3aec8e40369cf842293f07.jpg",
-        "precio": 62000,
-        "categoria": "herramientas"
+        "nombre": "Genshin Impact 600 Genesis Cristal",
+        "imagen": "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg",
+        "precio": 68000,
+        "categoria": "juegos"
     },
     {
         "id": 18,
-        "nombre": "Canva Education 1 Año",
-        "imagen": "https://i.pinimg.com/1200x/c9/35/61/c93561ce889c03839424e455d98579c3.jpg",
-        "precio": 16000,
-        "categoria": "herramientas"
+        "nombre": "Genshin Impact 1.090 Genesis Cristal",
+        "imagen": "https://i.pinimg.com/1200x/11/c8/00/11c800b14de687e60dab56d716b4476d.jpg",
+        "precio": 100000,
+        "categoria": "juegos"
     }
 ]
